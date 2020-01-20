@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>预览</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="lie1">
+					<h1>sdfa</h1>
+					<iframe src="footer友情链接（zfyqlj）.html" width="" height=""></iframe>
+				</div>
+			</div>
+			<div class="row">
+				<div class="lie1">
+					<h1>sdfa</h1>
+					<iframe src="footer服务（zffw）.html" width="" height=""></iframe>
+				</div>
+			</div>
+			<div class="row">
+				<div class="lie1">
+					<h1>sdfa</h1>
+					<iframe src="footer服务（zffw）.html" width="" height=""></iframe>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var all = document.querySelectorAll('iframe')
+			var width = document.body.clientWidth // 性能优化
+			var height = document.body.clientHeight // 性能优化
+			var oneflag = true
+			var init = function () {
+				for(var f = 0 ; f < all.length; f++) {
+					if (oneflag) {
+						oneflag = false
+						all[f].addEventListener('load', function () {
+							this.style.height = this.contentWindow.document.body.scrollHeight + 'px'
+						}, false)
+					} else {
+						all[f].style.height = all[f].contentWindow.document.body.scrollHeight + 'px'
+					}
+				}
+			}
+			init()
+			var timer = setInterval(function () {
+				if (width != document.body.clientWidth) {
+					// console.log('窗口大小在变化')
+					init()
+				} else {
+					// console.log('窗口大小无变化')
+				}
+				width = document.body.clientWidth
+			}, 1000)
+			
+		</script>
+	</body>
+</html>

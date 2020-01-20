@@ -24,8 +24,6 @@ a { color: #333; text-decoration: none; }
 a:hover { color:#4c8d00; text-decoration: underline; }
 
 
-
-
 input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
     padding: 0px 0px;
 }
